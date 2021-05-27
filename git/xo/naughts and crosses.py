@@ -36,21 +36,21 @@ char_check=False
 
 while char_check==False:
     print ('Do you want to be x or o?')
-    uxo=input()
-    if uxo== 'X' or uxo=='x':
-        uchar='X'
-        rchar='O'
+    xoans=input()
+    if xoans== 'X' or xoans=='x':
+        user_character='X'
+        computer_character='O'
         char_check=True
-    elif uxo== 'O' or uxo=='o':
-        uchar='O'
-        rchar='X'
+    elif xoans== 'O' or xoans=='o':
+        user_character='O'
+        computer_character='X'
         char_check=True
     else:
         char_check=False
 
-print("Okay, I'll go first as ",rchar,'then')
+print("Okay, I'll go first as ",computer_character,'then')
 
-AV={'a1':'-','a2':'-','a3':'-','b1':'-','b2':'-','b3':'-','c1':'-','c2':'-','c3':'-'}
+Availability={'a1':'-','a2':'-','a3':'-','b1':'-','b2':'-','b3':'-','c1':'-','c2':'-','c3':'-'}
 
 Game=False
 
@@ -66,8 +66,8 @@ def Gamecheck():
     col3=a[3]+b[3]+c[3]
     OWin='OOO'
     XWin='XXX'
-    global AV
-    avlen=len(AV)
+    global Availability
+    avlen=len(Availability)
     global Game
     global draw_tag
     draw_tag=False
@@ -82,9 +82,6 @@ def Gamecheck():
         rowC=rowC+i
     if rowA== XWin or rowA==OWin:
         print('win on rowA')
-        print (rowA)
-        print (XWin)
-        print (OWin)
         Game=True
     elif rowB == XWin or rowB==OWin:
         print('win on rowB')
@@ -115,19 +112,19 @@ def Gamecheck():
         Game=False
 
 while Game==False:
-    rpick=random.choice(list(AV.keys()))
-    AV.pop(rpick)
-    rslist=list(rpick)
+    random_pick=random.choice(list(Availability.keys()))
+    Availability.pop(random_pick)
+    rslist=list(random_pick)
     rowsel=rslist[0]
     colsel=rslist[1]
     colsel=int(colsel)
 
     if rowsel== 'a':
-        a[colsel]=rchar
+        a[colsel]=computer_character
     elif rowsel== 'b':
-        b[colsel]=rchar
+        b[colsel]=computer_character
     elif rowsel== 'c':
-        c[colsel]=rchar
+        c[colsel]=computer_character
         
     print(a[1]+'|'+a[2]+'|'+a[3])
     print(b[1]+'|'+b[2]+'|'+b[3])
@@ -142,31 +139,31 @@ while Game==False:
             print("-------------")
     else:
         if Rnd == 0:
-            print ('For example, I just placed my piece on ',rpick)
+            print ('For example, I just placed my piece on ',random_pick)
         else:
             print('There we go,')
 
-        avlen=len(AV)
+        avlen=len(Availability)
             
         print ("Your turn now!")
-        upick=input()
+        user_pick=input()
 
-        while upick not in AV:
+        while user_pick not in Availability:
             print('Oops! That spot is already filled, try again!')
-            upick=input()
+            user_pick=input()
 
-        AV.pop(upick)
-        ulist=list(upick)
+        Availability.pop(user_pick)
+        ulist=list(user_pick)
         rowu= ulist[0]
         colu= ulist[1]
         colu=int(colu)
 
         if rowu== 'a':
-            a[colu]=uchar
+            a[colu]=user_character
         elif rowu== 'b':
-            b[colu]=uchar
+            b[colu]=user_character
         elif rowu== 'c':
-            c[colu]=uchar
+            c[colu]=user_character
 
         Rnd+=1
 
