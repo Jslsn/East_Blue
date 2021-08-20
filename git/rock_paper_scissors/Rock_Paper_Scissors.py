@@ -1,5 +1,6 @@
-#Import the random functions
+#Import the random and time functions
 import random
+import time
 
 #Prompt the user 
 print('Hey! Wanna play rock paper scissors!?')
@@ -53,10 +54,15 @@ computer_score=0
 while user_perm==True:
     #Switch the functionality of the function so it works in loops and begin the game
     prompt_switch=1
+    time.sleep(0.5)
     print('Okay!')
+    time.sleep(0.5)
     print ('Rock')
+    time.sleep(1)
     print('Paper')
+    time.sleep(1)
     print('Scissors!')
+    time.sleep(1)
     #Users answer is taken in
     user_choice=input()
     #Pick a random answer and make it the computer selection
@@ -97,6 +103,7 @@ while user_perm==True:
 
     #Now we print what the computer chose so that the user can see.
     print (computer_choice)
+    time.sleep(1)
 
     #If both values are the same then it's obviously a draw
     if user_choice_value==computer_choice_value:
@@ -112,6 +119,9 @@ while user_perm==True:
         #Increase the users score
         user_score+= 1
 
+    time.sleep(1)
+    print ("Sooo, it looks like...")
+    time.sleep(2)
     #Print out the scores in ways that vary depending on score
     if user_score > computer_score:
         print (f"You're currently winning {user_score}-{computer_score} :(")
@@ -120,6 +130,7 @@ while user_perm==True:
     else:
         print (f"We're currently tied up at {computer_score}-{computer_score}, we should keep going and find a winner")
 
+    time.sleep(1)
     #Prompt the user to do another round(using the switched up yes_no function)     
     print('Wanna go again!?')
 
