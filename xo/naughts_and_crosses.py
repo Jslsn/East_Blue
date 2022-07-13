@@ -5,9 +5,9 @@ print ("Hello, wanna play naughts and crosses against me?")
 print ("I'm not very good, but it could be fun :)")
 
 #A somewhat excessive list anticipating various ways the user may answer Yes or No.
-yes_list=('Yes','yes','YES','yEs','yeS','YEs','yES')
+yes_list=('YES','Y')
 
-no_list=('No','no','NO','nO')
+no_list=('NO','N')
 
 #A loop to avoid anything wonky happening if the user answers in a way the script isn't equipped to deal with.
 
@@ -20,10 +20,10 @@ while ans_check!=True:
     print ("Yes or no?")
     request_ans=input()
     #If they answered yes, we can leave the loop and carry on with the script.
-    if request_ans in yes_list:
+    if request_ans.upper() in yes_list:
         ans_check=True
     #If they answered no, the script closes.
-    elif request_ans in no_list:
+    elif request_ans.upper() in no_list:
         print ('Oh, okay ;-;')
         exit()
     #If anything else is answered, loop back; printing "Yes or no" Again should nudge them to enter something valid.
@@ -228,7 +228,7 @@ while Game==False:
 
         #If the game finishes at this point and there's no draw, the user made the winning move
         if Game==True:
-            if draw_tag=False:
+            if draw_tag == False:
                 print("Looks like you won")
                 print('--------------------')
             #If there is a draw, don't say anything, the draw message has already been said

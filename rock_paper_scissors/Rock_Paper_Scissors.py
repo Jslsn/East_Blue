@@ -15,18 +15,18 @@ def yes_no():
     global prompt_switch
     global user_perm
     #Lists that allow for more variation in possible answers a user can enter.
-    yes_list=('Yes','yes','YES','yEs','yeS','YEs','yES','Sure','sure','yeah','Yeah','Ready','ready','y','Y')
-    no_list=('No','no','NO','nO','Nah','nah','n','N')
+    yes_list=('YES','SURE','YEAH','READ','Y')
+    no_list=('NO','NAH','N')
     check=False
     #While we haven't been given the a (valid) answer, ask the user to answer "Yes or no?"
     while check!=True:
         print('Yes or no?')
         answer=input()
         #If the user answers yes, set the check to be true and break the loop.
-        if answer in yes_list:
+        if answer.upper() in yes_list:
             check=True
         #If the answer is no and we're not in the loop, close the script.
-        elif answer in no_list:
+        elif answer.upper() in no_list:
             if prompt_switch==0:
                 print ('Oh, okay, cya!')
                 exit()
