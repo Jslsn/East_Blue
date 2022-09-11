@@ -5,7 +5,7 @@ This was my first repo and is now where I dump various smaller scripts I decide 
 
 ## Games :video_game:
 
-This repo was initially just Python scripts for games and is currently mainly that too. I made this games with the intention of making them as smooth an experience as I could think up at the time, giving the ability to stop the game whenever reasonable and minimize the possibility of user input creating errors that will break the script.
+This repo was initially just Python scripts for games and is currently mainly that too. I made these games with the intention of making them as smooth an experience as I could think up at the time, giving the ability to stop the game whenever reasonable and minimize the possibility of user input creating errors that would break the script.
 
 
 ### Hangman :standing_person:
@@ -19,7 +19,7 @@ This script uses random to select a random word from the file and plays like you
 
 This exists in the xo directory, when you run the script, it will give you the option of which symbol you want to use. The script will always go first, use coordinates(a1 to c3) to place your symbol on various positions on the grid.
 
-This uses random to select a random item in the grid, this means you'll have an easy time against the script in almost all cases.
+This uses random to select a random position on the grid, this means you'll have an easy time against the script in almost all cases.
 
 
 ### Rock Paper Scissors :gem: :page_facing_up: :scissors:
