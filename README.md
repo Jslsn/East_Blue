@@ -1,6 +1,6 @@
 # East Blue :ocean:
 
-This was my first repo and is now where I dump on various smaller scripts I decide to work on. 
+This was my first repo and is now where I dump various smaller scripts I decide to work on. 
 
 
 ## Games :video_game:
