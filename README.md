@@ -34,4 +34,4 @@ This script also exists in my Golden Age repo, but it's just a random script tha
 
 I'd normally get the maximum weighting and alert based on a certain percentage of the total. The number that needs to be compared would usually be gathered by a for loop that would add the current counter total to a list when certain requirements are met.
 
-VERY specific use case, but I'm throwing it here in case it comes handy somewhere else. The original POC bash script, the fit for purpose Python version of the script, and the recreated Go package are here. 
+VERY specific use case, but I'm throwing it here in case it comes handy somewhere else. I've added both the original POC bash script and the fit for purpose Python version of the script here along with it recreated as a Go package. 
